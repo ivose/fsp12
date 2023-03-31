@@ -1,0 +1,111 @@
+Script started on 2023-03-17 20:53:59+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="125" LINES="25"]
+]0;ivo@LAPTOP-0KNMEE5S: /mnt/c/ivo/fullstack/part12-containers-applications/script-answers[01;32mivo@LAPTOP-0KNMEE5S[00m:[01;34m/mnt/c/ivo/fullstack/part12-containers-applications/script-answers[00m$ exit[2Plsdocker exec -it mongo bashexit[Kdocker exec -it mongo bash
+[?2004hroot@4709da854a2d:/# [Kroot@4709da854a2d:/# exitmongosh -u the_username -p the_passwordroot@4709da854a2d:/# exit[K[Kexitmongosh -u the_username -p the_password
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6414b7570d6d1031cb9c0a26
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.0[0m
+Using MongoDB:		6.0.5
+[1m[33mUsing Mongosh[0m:		1.8.0
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2023-03-17T18:50:17.899+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-03-17T18:50:19.069+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2023-03-17T18:50:19.069+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1m[33m------[0m
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         12.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   40.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId("6414b668ccddb61b38a7027f"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("6414b668ccddb61b38a70280"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15Gdb.todos.insertOne({ text[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, d[36mdo[39mdone[33mdone[39m: fals[33mfalse[39m })
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("6414b7d6cf2409e8c2c8b7e5")
+}
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId("6414b668ccddb61b38a7027f"),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId("6414b668ccddb61b38a70280"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("6414b7d6cf2409e8c2c8b7e5"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15Gexit
+[?2004hroot@4709da854a2d:/# exit
+[?2004lexit
+]0;ivo@LAPTOP-0KNMEE5S: /mnt/c/ivo/fullstack/part12-containers-applications/script-answers[01;32mivo@LAPTOP-0KNMEE5S[00m:[01;34m/mnt/c/ivo/fullstack/part12-containers-applications/script-answers[00m$ exit
+exit
+
+Script done on 2023-03-17 20:56:54+02:00 [COMMAND_EXIT_CODE="0"]
